@@ -1,15 +1,16 @@
 'use strict';
 
+const The_intgr = +prompt('Gimme a positive integer ');
+const base = +prompt('Enter starting number')
 
-const DegreeC = +prompt('Input degeree');
+let sum = 0;
+let numbers = [];
 
-const DegreeF = (DegreeC * 9) / 5 + 32;
+for (let i = base; i <= The_intgr; i++) {
+  sum += i;
+  numbers.push(i);
+  console.log(i);
+}
 
-const DegreeK = DegreeC + 273.15;
-
-
-
-const Answer = `${DegreeC} Degree celcius is ${DegreeF} degrees in Fahrenheit and ${DegreeK} degrees kelvin`;
-
-
-document.getElementById('Target').innerHTML = Answer;
+document.querySelector('#Target').innerHTML =
+ `Natural numbers sum is tai se summa  ${sum}`;

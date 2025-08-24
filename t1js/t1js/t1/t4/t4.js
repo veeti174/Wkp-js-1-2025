@@ -3,33 +3,28 @@
 
 const Score = prompt('Input score (0-100)');
 
-function grades(score) {
+function grades(Score) {
   if (Score < 40) {
     return 0;
   }
-  elif (Score <= 52) {
+  else if (Score <= 52) {
     return 1;
   }
-  elif (Score <= 64) {
+  else if (Score <= 64) {
     return 2;
   }
-  elif (Score <= 76){
+  else if (Score <= 76){
     return 3;
   }
-  elif (Score <= 88) {
+  else if (Score <= 88) {
     return 4;
   }
   else {
     return 5;
   }
 }
-const DegreeF = (DegreeC * 9) / 5 + 32;
+const grade = grades(Score)
 
-const DegreeK = DegreeC + 273.15;
+const Answer = `The grade I the great man will grant you is ${grade}`;
 
-
-
-const Answer = `${DegreeC} Degree celcius is ${DegreeF} degrees in Fahrenheit and ${DegreeK} degrees kelvin`;
-
-
-document.getElementById('Target').innerHTML = Answer;
+document.getElementById('target').innerHTML = Answer;
